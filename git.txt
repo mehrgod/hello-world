@@ -1,0 +1,15 @@
+git checkout master # go to master branch
+git pull origin master # get the latest master
+git checkout -b my_branch_name # branch out from master
+
+then after i am done with my coding and have committed everything, on my own branch:
+
+git checkout -b my_branch_name_v2 # just to make sure I do not destroy my original branch by a mistake
+git checkout master
+git pull origin master
+git checkout my_branch_name_v2
+git rebase -i master # rebase the changes on master
+
+then resolve any conflicts that show up here. once done then:
+
+git push origin my_branch_name_v2
